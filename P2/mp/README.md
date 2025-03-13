@@ -1,5 +1,5 @@
-## Portal 2 multiplayer maps
+## Portal 2 singleplayer maps
 
 ### Index
-| Name | Description | Elements | Filename |
-| ---- | ----------- | -------- | -------- |
+| Name | Description | Release Date | Filename |
+| ---- | ----------- | ------------ | -------- |
