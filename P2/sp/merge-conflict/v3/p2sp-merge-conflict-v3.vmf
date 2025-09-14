@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8870"
-	"mapversion" "169"
+	"mapversion" "174"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "169"
+	"mapversion" "174"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -3605,6 +3605,126 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 3000]"
+	}
+}
+entity
+{
+	"id" "3671"
+	"classname" "math_counter"
+	"max" "0"
+	"min" "0"
+	"StartDisabled" "0"
+	"startvalue" "0"
+	"targetname" "core_choreo_state_counter"
+	connections
+	{
+		"OnGetValue" "core_choreo_state_switchInValue0-1"
+	}
+	"origin" "28 -72 94"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "3683"
+	"classname" "logic_case"
+	"Case01" "0"
+	"Case02" "1"
+	"Case03" "2"
+	"Case04" "3"
+	"targetname" "core_choreo_state_switch"
+	connections
+	{
+		"OnCase01" "core_fadeinoutFadeReverse0-1"
+	}
+	"origin" "12 -72 94"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"comments" "0 : Fade In   1: Idle       2: Fade out + restart"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "3701"
+	"classname" "env_fade"
+	"duration" "2"
+	"holdtime" "0"
+	"renderamt" "255"
+	"rendercolor" "0 0 0"
+	"ReverseFadeDuration" "2"
+	"spawnflags" "0"
+	"targetname" "core_fadeinout"
+	connections
+	{
+		"OnBeginFade" "core_choreo_state_counterSetValue12-1"
+	}
+	"origin" "-4 -72 94"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "3725"
+	"classname" "logic_timer"
+	"RefireTime" "1"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "core_choreo_state_update_timer"
+	"UseRandomTime" "0"
+	connections
+	{
+		"OnTimerHigh" "core_choreo_state_counterGetValue0-1"
+		"OnTimerHigh" "core_choreo_debug_sayDisplay0-1"
+	}
+	"origin" "12 -56 94"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"comments" "0 : Fade In   1: Idle       2: Fade out + restart"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "3737"
+	"classname" "game_text"
+	"channel" "1"
+	"color" "100 100 100"
+	"color2" "240 110 0"
+	"effect" "0"
+	"fadein" "1.5"
+	"fadeout" "0.5"
+	"fxtime" "0.25"
+	"holdtime" "1.2"
+	"message" "fdhdgjtrgjrtgjnrtgjn"
+	"spawnflags" "0"
+	"targetname" "core_choreo_debug_say"
+	"x" "-1"
+	"y" "-1"
+	"origin" "23.2022 -38.8873 90"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"comments" "0 : Fade In   1: Idle       2: Fade out + restart"
+		"logicalpos" "[0 0]"
 	}
 }
 cameras
